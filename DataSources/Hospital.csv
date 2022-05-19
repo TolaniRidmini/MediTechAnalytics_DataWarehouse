@@ -1,0 +1,146 @@
+HospitalID,HospitalName,HospitalType,City
+10001,Jackson Medical Center,General Acute Care,Guthrie
+10005,North Baldwin Infirmary,General Acute Care,Hartsville
+10006,St Vincent'S St Clair,General Acute Care,Milford
+10007,Crestwood Medical Center,Critical Access,Greenfield
+10008,Hill Hospital Of Sumter County,Critical Access,Geneva
+10011,Brookwood Medical Center,General Acute Care,Brooklyn
+10012,Springhill Memorial Hospital,General Acute Care,Panguitch
+10016,Rmc Jacksonville,Critical Access,Memphis
+10018,Evergreen Medical Center,Psychiatric,Red Bluff
+10019,Baptist Medical Center East,General Acute Care,Stephenville
+10021,L V Stabler Memorial Hospital,General Acute Care,Madera
+10022,Shoals Hospital,Long Term Care,Hayward
+10023,Russellville Hospital,General Acute Care,Gold Beach
+10024,Coosa Valley Medical Center,General Acute Care,Westwood
+10029,Jack Hughston Memorial Hospital,Military,Upland
+10032,Atmore Community Hospital,General Acute Care,Fremont
+10033,North Alabama Speciality Hospital,Rehabilitation,Cordova
+10034,Washington County Hospital,General Acute Care,Green Bay
+10035,Red Bay Hospital,Psychiatric,Redding
+10036,Choctaw General Hospital,Special,Petersburg
+10038,St Vincents Blou+B47:B89Nt,Children,North Wilkesboro
+10039,Children'S Hospital Of Alabama,Children,Lancaster
+10040,University Of S A Children'S And Women'S Hos,Psychiatric,Bloomsburg
+10044,Providence Alaska Medical Center,Special,Sandusky
+10045,Mat-Su Regional Medical Center,Critical Access,Shell Lake
+10046,Bartlett Regional Hospital,Psychiatric,Waco
+10047,Fairbanks Memorial Hospital,Special,Hawaiian Gardens
+10049,Alaska Regional Hospital,Critical Access,Flowood
+10051,Yukon Kuskokwim Delta Reg Hospital,General Acute Care,Paducah
+10052,Chi-St Vincent Infirmary,General Acute Care,Hawarden
+10055,Mercy Hospital Northwest Arkansas,General Acute Care,Meridian
+10056,Chambers Memorial Hospital,Rehabilitation,Oregon
+10058,White County Medical Center,General Acute Care,Chamberlain
+10059,Mena Regional Health System,General Acute Care,Tucson
+10061,Uams Medical Center,General Acute Care,Wheatland
+10062,North Arkansas Regional Medical Center,Rehabilitation,Republic
+10065,Sparks Medical Center - Van Buren,General Acute Care,Omaha
+10069,Forrest City Medical Center,Critical Access,Salinas
+10073,St Bernards Medical Center,General Acute Care,Spokane
+10078,Northwest Medical Center-Springdale,Long Term Care,Lone Tree
+10079,Chi St. Vincent Hospital Hot Springs,Psychiatric,Lafayette
+10083,Baxter Regional Medical Center,Psychiatric,Biddeford
+10085,Conway Regional Medical Center,General Acute Care,Sherman
+10086,Baptist Health Medical Center North Little Rock,General Acute Care,Heber City
+10087,Arkansas Methodist Medical Center,Psychiatric,Ketchum
+10089,St Marys Regional Medical Center,General Acute Care,Cleveland
+10090,Five Rivers Medical Center,Military,Opelika
+10091,Ouachita County Medical Center,Military,Berkeley Springs
+10092,Drew Memorial Hospital,General Acute Care,Mccomb
+10095,Sparks Regional Medical Center,General Acute Care,Corbin
+10097,Mercy Hospital Fort Smith,General Acute Care,Burlington
+10099,Magnolia Hospital,Military,Reno
+10100,Great River Medical Center,Military,Baldwin
+10101,Jefferson Regional Medical Center,General Acute Care,Pocahontas
+10102,Baptist Health Medical Center-Stuttgart,General Acute Care,Cleveland
+10103,North Metro Medical Center,Critical Access,Britton
+10104,Baptist Health Medical Center-Hot Springs County,Critical Access,Murfreesboro
+10108,National Park Medical Center,General Acute Care,Dighton
+10109,Saline Memorial Hospital,Critical Access,Melrose
+10110,Helena Regional Medical Center,General Acute Care,Windsor
+10112,Medical Center South Arkansas,General Acute Care,Seward
+10113,Baptist Health Medical Center-Little Rock,Critical Access,Port Arthur
+10114,Nea Baptist Memorial Hospital,Critical Access,Amory
+10118,White River Medical Center,Critical Access,Southampton
+10120,Levi Hospital,Critical Access,Goshen
+10125,Arkansas Heart Hospital,General Acute Care,Naples
+10126,St Vincent Medical Center/North,General Acute Care,Elwood
+10128,Arkansas Surgical Hospital,General Acute Care,Laveen
+10129,Northwest Health Physicians Specialty Hospital,Critical Access,Lancaster
+10130,Wadley Regional Medical Center At Hope,Psychiatric,Minneapolis
+10131,Baptist Health Medical Center-Conway,General Acute Care,Fremont
+10138,North Logan Mercy Hospital,General Acute Care,Canton
+10139,River Valley Medical Center,General Acute Care,Oklahoma City
+10144,Mercy Hospital Turner Memorial,Critical Access,Bayamon
+10146,Eureka Springs Hospital,Critical Access,Blanding
+10148,Mercy Hospital Waldron,General Acute Care,San Antonio
+10149,Community Medical Center Izard County,Critical Access,Arecibo
+10150,Crossridge Community Hospital,Critical Access,Caguas
+10157,Mcgehee Hospital,General Acute Care,Newark
+10158,Lawrence Memorial Hospital,General Acute Care,Atlanta
+10164,Stone County Medical Center,General Acute Care,Iraan
+10168,Howard Memorial Hospital,Rehabilitation,Cape Girardeau
+10169,Baptist Health Medical Center Heber Spings,General Acute Care,Creston
+10172,Ozark Health,General Acute Care,Mcgehee
+11300,Dewitt Hospital & Nursing Home,Psychiatric,Humacao
+11302,South Missississpi County Regional Medical Center,General Acute Care,San German
+11304,Dallas County Medical Center,General Acute Care,Jamestown
+11305,Mercy Hospital Booneville,Psychiatric,Brandon
+13300,De Queen Medical Center,Military,Polacca
+13301,Little River Memorial Hospital,General Acute Care,Boulder City
+20001,Baptist Health Medical Center-Arkadelphia,General Acute Care,Ontonagon
+20006,Fulton County Hospital,General Acute Care,Fernandez Juncos
+20008,Ashley County Medical Center,Critical Access,Mayaguez
+20012,Mary Lanning Healthcare,General Acute Care,Coldwater
+20017,Methodist Hospital,General Acute Care,Kissimmee
+20018,Chi Health Bergan Mercy,General Acute Care,Sterling
+20024,Regional West Medical Center,Psychiatric,Stamford
+20026,Great Plains Health,General Acute Care,Long Beach
+21301,Fremont Health Medical Center,General Acute Care,Wadesboro
+21302,Chi Health Immanuel,Critical Access,Sun City West
+21303,Chi Health Midlands,General Acute Care,Springfield
+21304,Columbus Community Hospital,General Acute Care,Olympia
+21305,Faith Regional Health Services,General Acute Care,Green Bay
+21306,Lincoln Surgical Hospital,Critical Access,Centreville
+21307,Chi Health Nebraska Heart,General Acute Care,Willows
+21308,Nebraska Orthopaedic Hospital,Critical Access,Clinton Township
+21309,Chi Health Lakeside,General Acute Care,Spearfish
+21310,Midwest Surgical Hospital ,Psychiatric,Ventura
+21311,Bellevue Medical Center,General Acute Care,Paoli
+21312,Nebraska Spine Hospital,General Acute Care,Clarion
+21313,Kearney Regional Medical Center,General Acute Care,Edmond
+21314,Harlan County Health System,General Acute Care,Fort Worth
+30001,Fillmore County Hospital,General Acute Care,Wheeler
+30002,Pawnee County Memorial Hospital,General Acute Care,Hazel Crest
+30006,Niobrara Valley Hospital,General Acute Care,Long Beach
+30007,Thayer County Health Services,General Acute Care,Ozark
+30010,Kimball Health Services,Psychiatric,Dover Foxcroft
+30011,Kearney County Health Services Hospital,General Acute Care,Naples
+30012,Saunders Medical Center,Critical Access,Columbia
+30013,Henderson Health Care Services,General Acute Care,Rancho Mirage
+30014,Community Memorial Hospital,Special,Carmel
+30016,Regional West Garden County Hospital,Critical Access,Twin Falls
+30022,Franklin County Memorial Hospital,General Acute Care,Albany
+30023,Genoa Community Hospital,Women,Fort Collins
+30024,Gothenburg Memorial Hospital,Women,San Leandro
+30030,Annie Jeffrey Memorial County Health Center,Women,Stuart
+30033,Brodstone Memorial Hosp,Critical Access,Carrollton
+30036,Webster County Community Hospital,Women,Reno
+30037,Morrill County Community Hospital,Psychiatric,Raton
+30038,Weatherford Regional Hospital,Women,Knoxville
+30043,Harper County Community Hospital,Psychiatric,New London
+30055,Cordell Memorial Hospital,Women,Middleburg
+30061,Alliancehealth Madill,Women,Rolla
+30062,Okeene Municipal Hospital,Women,Las Vegas
+30064,Arbuckle Memorial Hospital Authority,Women,Grand Junction
+30065,Fairview Regional Medical Center Authority,Women,Seymour
+30068,Quartz Mountain Medical Center,Military,Rochester
+30069,Drumright Regional Hospital,Women,Arlington
+30071,Seiling Municipal Hospital,General Acute Care,Auburn
+30073,Creek Nation Community Hospital,General Acute Care,Iowa City
+30074,Carnegie Tri-County Municipal Hospital,Special,Franklin
+30077,Haskell County Community Hospital,Military,Glendora
+30078,Newman Memorial Hospital,General Acute Care,The Villages
+30083,Eastern Oklahoma Medical Center,Special,Siloam Springs
+30084,Harmon Memorial Hospital,Children,Montevideo

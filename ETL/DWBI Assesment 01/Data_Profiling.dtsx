@@ -1,0 +1,521 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/13/2022 2:14:34 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-T49GT92"
+  DTS:CreatorName="DESKTOP-T49GT92\DELL"
+  DTS:DTSID="{1694B565-A586-4B38-AD9C-B798B63CC7E6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{D567C630-D308-4FB9-9C80-6B22F2844E05}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DataProfiler]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{0FA81354-EB96-48E5-B5C2-A71B582B8766}"
+      DTS:ObjectName="DataProfiler">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\DELL\Desktop\DataSet\DataProfiling\DataProfiler" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DataProfiler_result]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F9B0234B-4E31-482A-89E6-E0A56B88001C}"
+      DTS:ObjectName="DataProfiler_result">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\DELL\Desktop\DataSet\DataProfiling\DataProfiler_result" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[data_profiler]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{85A79AD4-2AAA-472C-893B-863AAAE85916}"
+      DTS:ObjectName="data_profiler">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\DELL\Desktop\DataSet\data_profiler" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-T49GT92\MSSQLSERVER1.MediTech_Analytics_Staging]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}"
+      DTS:ObjectName="DESKTOP-T49GT92\MSSQLSERVER1.MediTech_Analytics_Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-T49GT92\MSSQLSERVER1;Initial Catalog=MediTech_Analytics_Staging;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DP]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{75D119B3-EA9F-4DE7-AEA7-3533EB1E54E5}"
+      DTS:ObjectName="DP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\DELL\Desktop\DataSet\DataProfiling\DP" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DP 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{69247D76-13EC-4CF1-AEED-6CA592B9EC8A}"
+      DTS:ObjectName="DP 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\DELL\Desktop\DataSet\DataProfiling\DP" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Profiling Task"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{197E4060-4383-4EB0-91E7-3416B9158FFD}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Profiling Task"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="DP 1">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="Stg Doctor" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="Stg Doctor" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="Stg Doctor" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="Stg Doctor" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="Stg Doctor" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointment" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointment" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointment" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointment" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointment" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq2">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointmentFee" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq2">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointmentFee" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq2">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointmentFee" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq2">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointmentFee" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq2">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAppointmentFee" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq3">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAttendance" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq3">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAttendance" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq3">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAttendance" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq3">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAttendance" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq3">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgAttendance" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq4">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgClinic" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq4">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgClinic" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq4">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgClinic" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq4">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgClinic" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq4">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgClinic" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq5">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgDepartment" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq5">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgDepartment" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq5">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgDepartment" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq5">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgDepartment" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq5">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgDepartment" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq6">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgHospital" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq6">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgHospital" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq6">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgHospital" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq6">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgHospital" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq6">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgHospital" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq7">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatient" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq7">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatient" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq7">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatient" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq7">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatient" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq7">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatient" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq8">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatientAddress" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq8">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatientAddress" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq8">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatientAddress" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq8">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatientAddress" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq8">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgPatientAddress" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq9">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTest" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq9">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTest" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq9">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTest" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq9">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTest" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq9">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTest" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq10">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTestPrice" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq10">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTestPrice" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq10">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTestPrice" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq10">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTestPrice" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq10">
+        <DataSourceID>{79E4F1CB-6E41-44CC-A8E9-6F1F1B44F902}</DataSourceID>
+        <Table Schema="dbo" Table="StgTestPrice" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Profiling Task"
+          TopLeft="415,190" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
